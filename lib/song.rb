@@ -8,7 +8,8 @@ class Song
   
   def initialize(name, artist_name = "", genre = [])
     @name = name
-    
+    binding.pry 
+    if artist_name.class != String 
     self.genre=(genre)
     self.artist=(artist_name) # have to use self in front of setter instance or it won't execute, why?
     
