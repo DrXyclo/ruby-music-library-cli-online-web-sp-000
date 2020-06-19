@@ -8,11 +8,11 @@ class Song
   
   def initialize(name, artist_name = "", genre = [])
     @name = name
-    binding.pry 
-    if artist_name.class != String 
-    self.genre=(genre)
-    self.artist=(artist_name) # have to use self in front of setter instance or it won't execute, why?
-    
+    @artist = artist_name
+
+   # self.genre=(genre)
+   # self.artist=(artist_name) # have to use self in front of setter instance or it won't execute, why?
+   # end
     save
   end
   
@@ -34,7 +34,13 @@ class Song
   def save
     @@all << self
   end
+  def artist=(artist_name)
+    self.artist = artist_name
+    binding.pry
+  end
   
+=begin
+
   def artist=(artist_name)
     @artist = artist_name
     if artist_name == ""
@@ -55,12 +61,17 @@ class Song
 
   end
 
+   # binding.pry 
+   # if artist_name != "" || genre != []
+=end 
+  
+
 
 
     
 end 
 
-class Artist
+class Artist  ###~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   attr_accessor :name, :songs, :genres
   
   @@all = []

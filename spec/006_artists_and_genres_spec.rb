@@ -6,9 +6,9 @@ describe "Associations — Artist and Genre:" do
   let(:artist) { Artist.new("The Magnetic Fields") }
   let(:other_artist) { Artist.new("Neutral Milk Hotel") }
 
-  context "Artist" do
+  context "Artist" do 
     describe "#genres" do
-      it "returns a collection of genres for all of the artist's songs (artist has many genres through songs)" do
+      it "returns a collection of genres for all of the artist's songs (artist has many genres through songs)" do  ## 44
 
         Song.new("The Luckiest Guy on the Lower East Side", artist, genre)
         Song.new("Long-Forgotten Fairytale", artist, other_genre)
